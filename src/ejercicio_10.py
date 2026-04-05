@@ -121,6 +121,7 @@ for round in rounds:
             f"  Puesto {nro_puesto}: {puesto['Nombre']} ({puesto['Puntaje']} puntos)")
 
 print()
+
 pos_final = dict(sorted(pos_final.items(), key=lambda item: item[1]['Acumulado'], reverse=True))
 
 ancho_nom = 13 
@@ -143,3 +144,5 @@ for chef in pos_final:
           f"{datos['Victorias']:>{ancho_num}}"
           f"{datos['Mejor puntaje']:>{ancho_num}}"
           f"{datos['Promedio']:>{ancho_num}}")
+    
+print("-" * (ancho_nom + ancho_num * 4))
